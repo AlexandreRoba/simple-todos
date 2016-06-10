@@ -3,6 +3,7 @@ import {Template} from 'meteor/templating';
 import {Tasks} from '../api/tasks.js';
 
 import './body.html';
+import './task.html';
 
 //Reminder here we create an json object for wich the properties tasks is a function
 //It is using the Object Literal Extensions of ES6
