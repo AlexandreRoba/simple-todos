@@ -35,13 +35,8 @@ Template.body.events({
         const target = event.target;
         const text = target.text.value;
 
-        //Insert a task into the collection
-        Tasks.insert({
-            owner: Meteor.userId(),
-            username: Meteor.user().username,
-            text: text,
-            createdAt: new Date()
-        });
+        // Insert a task into the collection
+        Meteor.call('tasks.insert', text);
 
         target.text.value = '';
     },
