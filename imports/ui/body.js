@@ -10,6 +10,7 @@ import './body.html';
 
 Template.body.onCreated(function onCreated() {
     this.state = new ReactiveDict();
+    Meteor.subscribe('tasks');
 });
 
 //Reminder here we create an json object for wich the properties tasks is a function
